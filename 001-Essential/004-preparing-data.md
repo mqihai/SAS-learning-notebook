@@ -169,7 +169,7 @@ data front rear;
 run;
 ```
 5. you can also use SELECT WHEN DO.
-6. 
+
 **Ex10:**
 ```sas
 data parks monuments;
