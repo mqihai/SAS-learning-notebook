@@ -26,3 +26,12 @@ data np_parks;
     putlog _all_;
 run;
 ```
+5. implicit output VS explicit output statement. They can control **when** and **where** to output.
+
+   * When an explicit OUTPUT statement is in a DATA step, the implicit OUTPUT is disabled.
+   * You can create multiple tables simultaneously simply by listing more than one table on the DATA statement. Then you can use the OUTPUT statement followed by the name of the table to which SAS should write the contents of the PDV.
+   * You can use the DROP= or KEEP= data set options to specify a unique list of columns for each table listed in the DATA statement. The PDV keeps track of the columns to drop from the specific output table.
+```sas
+table(DROP=col1 col2 ...)
+table(KEEP=col1 col2 ...)
+```
